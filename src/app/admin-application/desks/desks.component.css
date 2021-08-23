@@ -1,0 +1,80 @@
+.card{
+    border: 1px solid;
+    width: 150px !important;
+    height: 150px !important;
+    margin-top: 25px;
+    border-radius: 5%;
+    margin-right: 10px;
+    border: none
+}
+.cardWaiter{
+    background-color:#2c5fca ;
+}
+.cardFree{
+    background-color: white;;
+    
+}
+.cardDontInterupt{
+    background-color: grey;;
+
+}
+.cardPay{
+    background-color: #2d9185 ;
+}
+.cardMeni{
+    background-color:#e0613e;
+}
+p{
+    text-align: center;
+    color: rgb(8, 8, 8);
+     font-weight: bold; 
+}
+.freeDesk{
+    text-align: center;
+}
+.status{
+    color: white;
+    padding-top: 25px !important;
+}
+.busyDesk{
+    text-align: center;
+    color: white;
+}
+.waiterText::before{
+    content: 'KONOBAR';
+    padding-left: 2px;
+    /* font-size: 31px !important; */
+    display: inline-block;
+    font-size: 32px;
+    transform: scale(1, 1);
+}
+.meniText::before{
+    content: 'MENI';
+    padding-left: 24px;
+    /* font-size: 31px !important; */
+    display: inline-block;
+    font-size: 32px;
+    transform: scale(1.9, 1);
+}
+.dontInteruptText::before{
+    content: 'NE OMETAJ';
+    padding-left: 7px;
+    padding-top: 5px;
+    /* font-size: 31px !important; */
+    display: inline-block;
+    font-size: 25px;
+    transform: scale(1.1, 1.2);
+}
+.payText::before{
+    content: 'PLACANJE';
+    padding-left: 11px;
+    padding-top: 5px;
+    /* font-size: 31px !important; */
+    display: inline-block;
+    font-size: 25px;
+    transform: scale(1.2, 1.2);
+}
+.statusPayment{
+    color: white;
+    text-align: center;
+}

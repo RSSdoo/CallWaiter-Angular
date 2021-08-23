@@ -1,0 +1,110 @@
+<div>
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="row">
+                <div class="col-sm-6 .buttons">
+                    <h4 style="color: white; margin-top: 5px ;">Administracija</h4>
+                </div>
+                <div class="col-sm-6 .buttons">
+                    <a class="btn btn-primary"
+                        style="text-align:center; transform: translate(-113%); margin-bottom: 10px; width: 40%; background-color: #1082df;"
+                        (click)="LogOut()">Odjavi se</a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 buttons">
+
+                    <a (click)="NavigateToDesks()" class="btn btn-primary" style="background-color: #1082df;">
+                        Panel</a>
+                        <a (click)="OpenAddUser()" *ngIf="IsAdmin" class="btn btn-primary" style="margin-top: 5%;">
+                            Dodaj korisnika</a>
+                </div>
+            </div>
+
+           
+            <div class="row">
+
+                <div class="col-sm-6 buttons">
+                    <a href="#" class="btn btn-primary" style="font-weight: bold; background-color: transparent; text-align: center;
+                    color: white; font-size: 20px;">
+                        <span class="iconify" data-icon="vs:table-alt" data-inline="false"
+                            style="margin-top: -6px; font-size: 23px; margin-left: -5px;"></span>Stolovi</a>
+                    <a class="btn btn-primary" (click)="OpenTables()"
+                        style="text-align: center !important;margin-bottom: 10px;">
+                        Pregled stolova</a>
+                    <a class="btn btn-primary" (click)="OpenGroupAddDeskModal()"
+                        style="text-align: center; margin-bottom: 10px; ">
+                        Dodaj grupu stolova</a>
+                    <a class="btn btn-primary" (click)="OpenSubGroupAddDeskModal()"
+                        style="text-align: center; margin-bottom: 10px; ">
+                        Dodaj podgrupu stolova</a>
+                    <a class="btn btn-primary" (click)="OpenAddDeskModal()"
+                        style="text-align: center !important; margin-bottom: 10px;">
+                        Dodaj stol</a>
+
+
+
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6 buttons">
+
+                    <a href="#" class="btn btn-primary" style="font-weight: bold; background-color: transparent; text-align: center;
+                    color: white; font-size: 20px;">
+                        <span class="iconify" data-icon="bx:bxs-food-menu" data-inline="false"
+                            style="margin-top: -6px; font-size: 23px; margin-left: -5px;"></span>Meni</a>
+                    <a routerLink="/app/meni" class="btn btn-primary " style="margin-bottom: 10px;">Pregled menija</a>
+                    <a class="btn btn-primary" style="text-align: center; margin-bottom: 10px;"
+                    (click)="OpenAddGroupArticleModal()">Dodaj grupu za artikal</a>
+                    <a class="btn btn-primary" style="text-align: center; margin-bottom: 10px;"
+                    (click)="OpenTypeOfGroupModal()">Dodaj vrstu za artikal</a>
+                    <a class="btn btn-primary" style="margin-bottom: 10px;" (click)="OpenAddArticle()">Dodaj artikal</a>
+                  
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 buttons">
+
+                    <a href="#" class="btn btn-primary" style="font-weight: bold; background-color: transparent; text-align: center;
+                    color: white; font-size: 20px;">
+                        <span class="iconify" data-icon="bx:bx-restaurant" data-inline="false"
+                            style="margin-top: -6px; font-size: 23px; margin-left: -5px;"></span>Restoran</a>
+                    <a href="https://rss-reservation.tk/#/app/reservations" class="btn btn-primary " style="margin-bottom: 10px;">Rezervacije</a>
+           
+                  
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 buttons">
+
+                    <a href="#" class="btn btn-primary" style="font-weight: bold; background-color: transparent; text-align: center;
+                    color: white; font-size: 20px;">
+                        <span class="iconify" data-icon="akar-icons:network" data-inline="false"
+                            style="margin-top: -6px; font-size: 23px; margin-left: -5px;"></span>Društvene mreže</a>
+                    <a (click)="OpenLinksModal()" class="btn btn-primary " style="margin-bottom: 10px;">Linkovi</a>
+                    <a (click)="openPdf()" class="btn btn-primary " style="margin-bottom: 10px;">QRCode</a>
+           
+                  
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </body>
+
+    </html>
+
+</div>

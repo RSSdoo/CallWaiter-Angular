@@ -1,0 +1,126 @@
+<form #articleForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <h4 style="text-align: center; color:white; margin-bottom: 10px;">Dodaj artikal</h4> 
+        </div>
+        <div class="col-md-1">
+            <a mat-dialog-close style="background: transparent; border: none;"><span class="material-icons" style="color: white;">close</span></a>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate" style="color:#1082df;">Naziv artikla:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="nameOfArticle" #nameOfArticle="ngModel" ngModel class="form-control"
+                     placeholder="Naziv artikla">
+             
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate" style="color: #1082df;">Cijena:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="number" name="price" #nameOfArticle="ngModel" ngModel class="form-control"
+                     placeholder="Cijena">
+             
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="startDate" style="color: #1082df;">Grupa artikla:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <select 
+                    name="groupOfArticleId" required #groupOfArticleId="ngModel" [(ngModel)]="formGroupOfArticle" (change)="getTypeOfGroupArticles()">
+                    <option [ngValue]="undefined"> Grupa artikla</option>
+                    <option *ngFor="let item of groupOfArticleList" [ngValue]=item.id >{{item.nameOfGroup}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="startDate" style="color: #1082df;">Vrsta artikla:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <select 
+                    name="typeOfGroupArticleId" required #typeOfGroupArticleId="ngModel" [(ngModel)]="typeOfArticleId">
+                    <option [ngValue]="undefined"> Vrsta artikla</option>
+                    <option *ngFor="let item of typeOfArticleList" [ngValue]=item.id >{{item.name}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    
+    <div class="row"  [ngClass]= "formGroupOfArticle !== 10 ? 'hid' : 'show' " >
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8" >
+            <div class="form-group ">
+                <label for="startDate" style="color:#1082df;">Sastojci:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <textarea type="text" name="note" #note="ngModel" ngModel class="form-control" style="padding-left: 120px;"
+                    placeholder="Sastojci">  </textarea>   
+             
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <button type="submit"  class="btn btn-primary " 
+                *ngIf="!editMode">Dodaj</button>
+            <button type="submit"  class="btn btn-primary " 
+                *ngIf="editMode">Ažuriraj</button>
+    
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+   
+</form>
+

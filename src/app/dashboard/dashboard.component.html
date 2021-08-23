@@ -1,0 +1,78 @@
+<div>
+  <!DOCTYPE html>
+  <html>
+
+  <head>
+    <title></title>
+  </head>
+
+  <body>
+
+    <div class="main">
+      <div class="components">
+        <div class="row">
+          <div class="col-sm-6 buttons">
+            <div class="prvi">
+              <!-- <a (click)="callWaiterStatus()" class="imageAnchor">
+                <img class="konobar" src="../assets/pozovi_konobara.png" width="75" height="100" tabindex="1">
+              </a> -->
+              <button (click)="callWaiterStatus()" style="border-radius: 12px; margin-left: 40px; background-color: goldenrod; color: black;" type="button" class="btn btn-secondary btn-lg">
+                <span class="iconify" data-icon="bx:bxs-phone-call"></span><br>POZOVI KONOBARA</button>
+              <!-- <a (click)="callMenuStatus()">
+                <img class="meni" src="../assets/zatrazi_meni.png" width="75" height="100" tabindex="1">
+              </a> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 buttons">
+            <a class="btn btn-primary" style="font-weight: bold; background-color: transparent;
+                            color:transparent;">
+              Zatraži račun:</a>
+            <div class="placanje">
+              <a (click)="callTypeOfPaymentStatus(1)">
+                <img src="../assets/gotovina.png" width="75" height="90" tabindex="1">
+              </a>
+              <a (click)="callTypeOfPaymentStatus(5)">
+                <img class="kartica" src="../assets/kartica.png" width="75" height="90" tabindex="1">
+              </a>
+              <a (click)="callTypeOfPaymentStatus(6)">
+                <img class="virman" src="../assets/virman.png" width="75" height="90" tabindex="1">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6 buttons">
+            <div class="neOmetaj">
+              <!-- <a (click)="callDontInteruptStatus()">
+                <img class="ne_ometaj" src="../assets/ne_ometaj.png" width="75" height="90" tabindex="1">
+              </a> -->
+              <button (click)="callDontInteruptStatus()" style="border-radius: 12px; margin-left: 40px; background-color: slateblue; color: black;" type="button" class="btn btn-secondary btn-lg">
+                <span class="iconify" data-icon="ic:baseline-do-disturb"></span><br>NE OMETAJ</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="row">
+          <!-- <div class="col-sm-6 buttons">
+                        <a (click)="openUserMeni()" >
+                                <img  class="elek_meni" src="../assets/elektronski_meni.png" width="125" height="90" >
+                        </a>
+                    </div> -->
+          <div class="col-sm-6 buttons">
+            <!-- <a (click)="callMenuStatus()">
+              <img class="meni" src="../assets/zatrazi_meni.png" width="75" height="100" tabindex="1">
+            </a> -->
+            <button (click)="callMenuStatus()" style="border-radius: 12px; margin-left: 40px; background-color: indianred; color: black;" type="button" class="btn btn-secondary btn-lg">
+                <span class="iconify" data-icon="bx:bx-food-menu"></span><br>ZATRAŽI MENI</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  </html>
+
+</div>

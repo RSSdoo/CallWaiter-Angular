@@ -1,0 +1,406 @@
+.articlesHeading{
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    margin-top: 10%;
+}
+h4{
+  font-weight: bold;
+
+}
+.closeButton{
+  color: white;
+  font-size: 25px;
+  background-color:none !important;
+  border: none !important;
+  background: none !important;
+  display: none;
+}
+.underline{
+
+}
+.desks{
+  margin-left: 0%;
+}
+.typesButtons:hover{
+  color: navajowhite !important;
+}
+.listOfGroups{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    outline: none;
+}
+.w3-button:hover{
+    color: navajowhite !important;
+    background-color: transparent !important;
+}
+#spans{
+  transform: translate(0, 23%) !important;
+}
+.typesList{
+  text-decoration: none !important;
+  text-align: left;
+  margin-left: 42%;
+  font-weight: normal;
+  color: white;
+  text-transform: none;
+}
+p{
+  text-decoration: none;
+  margin: 0;
+}
+#groups{
+  margin-left: 25%;
+  color: white;
+
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+.toogleMobile{
+  display: none;
+}
+#mySidebar{
+  background-color: teal
+}
+.w3-container{
+  height: 100px;
+  background-color: black;
+}
+.inputSearch{
+  border: 1px solid teal;
+  background-color: black;
+  color: white !important;
+  outline: none;
+  padding: 10px;
+  width: 300px;
+}
+.inputDiv{
+  padding: 25px;
+  display: inline-flex;
+}
+.spanSearch{
+  width: 50px;
+  background-color: teal;
+}
+#spanSearchMaterial{
+  color: white;
+  transform: translate(30%, 25%);
+  font-size: 30px;
+} 
+@media screen and (max-width: 736px)   {
+  .toogleMobile{
+    display: block;
+  }
+  .inputDiv{
+    padding:  0px;
+    
+  }
+  .closeButton{
+    display: block;
+  }
+}
+
+.desks {
+  padding: 0 40px;
+  color: #222222;
+  margin-left: 30%;
+}
+
+#outer
+{
+  width:100% !important;
+  text-align:justify !important;
+} 
+.inner
+{
+  display: inline-block !important;
+}
+.drinks{
+background-color:#0e8ef3;
+
+}
+.container { 
+  height: 5%;
+  position: relative;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.food{
+background-color: white;
+}
+.filterSpan{
+  transform: translate(0,10%);
+  color: white;
+  font-size: 28px;
+}
+.modalH4{
+  transform: translate(50%, 20%);
+}
+.groupModalButtons{
+  background-color: teal;
+  width: 180px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.filterButton{
+    width: 80px;
+    background-color: #0e8ef3;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+}
+/* desks */
+.desks-table {
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 5%;
+}
+
+.desks table td {
+  color: black;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid;
+  font-weight: normal;
+}
+
+
+@media screen and (max-width: 700px) {
+.dashboard {
+  padding: 0;
+}
+.dashboard h4, .dashboard h3 {
+  text-align: center;
+}
+}
+
+@media screen and (max-width: 576px) {
+
+  .container-table100 {
+      padding-left: 15px;
+      padding-right: 15px;
+  }
+}
+
+
+
+table {
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: 0px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: absolute;
+}
+table * {
+  position: relative;
+}
+
+table tbody tr:last-child {
+  border: 0;
+}
+
+
+tbody tr {
+  font-size: 14px;
+  line-height: 0.8;
+  font-weight: unset;
+}
+
+.column1 {
+  width: 10px;
+
+}
+
+.column2 {
+  width: 160px;
+}
+
+.column3 {
+  width: 245px;
+}
+
+.column4 {
+  width: 110px;
+
+}
+
+.column5 {
+  width: 170px;
+
+}
+
+.column6 {
+  width: 222px;
+  padding-right: 62px;
+}
+.box{
+    width: 300px;
+    height: 150px;
+    background-color: #f1deb6;
+    transform: translate(-25%,40%);
+    border-radius: 15px;
+    
+}
+.box-buttons{
+  width: 60%;
+  background-color: rgb(158, 94, 10);
+  border: none;
+  text-align: center;
+  transform: translate(30%, 30%);
+  margin-bottom: 5px;
+
+
+}
+/* .modal-dialog{
+  width: 15% !important;
+} */
+@media screen and (max-width: 992px) {
+  /* .modal-dialog{
+    width: 100% !important;
+    margin-left: 30% !important;
+  } */
+  #filterModal{
+    transform: translate(21%) !important;
+  }
+  /* .spanSearch{
+    width: 290px !important;
+  } */
+  /* .w3-container{
+    display: inline-flex;
+  }
+  .w3-main{
+    margin-top: -20px !important;
+  } */
+  /* .inputDiv{
+    margin-left: 13px !important;
+  } */
+  .desks{
+    margin-left: 0%;
+  }
+
+  #outer{
+    transform: translate(30%, 10%) !important;
+  }
+  .modal{
+    width: 70% !important;
+    transform: translate(5%);
+  }
+  table {
+    display: block;
+  }
+  table > *, table tr, table td, table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 37px 0;
+  }
+  table tbody tr td {
+    padding-left: 50% !important;
+    margin-bottom: 24px;
+    font-size: 14px;
+  }
+  table tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table tbody tr td:before {
+    font-size: 14px;
+    color: #999999;
+    line-height: 1.2;
+    font-weight: unset;
+    position: absolute;
+    width: 40%;
+    left: 30px;
+    top: 0;
+  }
+  .mobile{
+    font-size: 40px;
+  }
+  .dashboard table tbody tr td:before {
+      color: rgb(104, 104, 104);
+      font-weight: bold;
+      padding: 20px;
+  } 
+  .mobileTdForPicture{
+     width: 100% !important;
+     border-top: 3px solid white;
+  }
+  .mobileForPicture{
+      transform: translate(-70%);
+  }
+
+  .desks-table table tbody tr td:nth-child(1):before {
+    color: white;
+    transform: translate(0,-80%);
+  }
+  .desks-table table tbody tr td:nth-child(2):before {
+    content: "Naziv artikla:";
+    margin-top: 8px;
+    color: black;
+    padding: 0px !important;
+  }
+  .desks-table table tbody tr td:nth-child(3):before {
+    content: "Cijena:";
+    margin-top: 8px;
+    color: black;
+  }
+  .desks-table table tbody tr td:nth-child(4):before {
+    content: "Grupa:";
+    margin-top: 8px;
+    color: black;
+  }
+  .desks-table table tbody tr td:nth-child(5):before {
+    content: "Vrsta:";
+    margin-top: 8px;
+    color: black;
+  }
+  .desks-table table tbody tr td:nth-child(6) {
+
+    margin-top: 8px;
+    color: black;
+    text-align: center;
+  }
+  .mobileTdPicture{
+     text-align: left !important;
+  }
+
+  td{
+      font-weight: bolder;
+  }
+  .column4,
+  .column5,
+  .column6 {
+    text-align: left;
+  }
+
+  .column4,
+  .column5,
+  .column6,
+  .column1,
+  .column2,
+  .column3 {
+    width: 100%;
+  }
+
+  tbody tr {
+    font-size: 14px;
+  }
+}
+
+

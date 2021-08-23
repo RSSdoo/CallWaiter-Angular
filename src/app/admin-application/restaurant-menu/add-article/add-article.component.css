@@ -1,0 +1,19 @@
+.btn {
+    width: 100%;
+    background-color:rgb(3, 79, 122) ; ;
+    border: none;
+}
+::ng-deep .mat-dialog-container{
+    background: #1082df;
+    margin-left: 50px !important;
+}
+.hid{
+    display: none;;
+}
+
+@media screen and (max-width: 736px)   {
+    ::ng-deep .mat-dialog-container{
+        background: #1082df ;
+        margin-left: 10px !important;
+    }
+}

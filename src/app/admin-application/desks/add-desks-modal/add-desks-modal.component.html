@@ -1,0 +1,126 @@
+
+<!--begin::Widget 11-->
+
+<form #addDeskForm="ngForm" (ngSubmit)="onSubmit()" >
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <h4 style="text-align: center; color: white; margin-bottom: 10px;">Dodaj stol</h4> 
+        </div>
+        <div class="col-md-1">
+            <a mat-dialog-close style="background: transparent; border: none;"><span class="material-icons" style="color:white;">close</span></a>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Broj stola:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="numberOfDesk" #numberOfDesk="ngModel" ngModel class="form-control"
+                     placeholder="Broj stola">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Broj mjesta:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="number" name="numberOfSeats" #numberOfSeats="ngModel" ngModel class="form-control"
+                     placeholder="Broj mjesta">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="startDate">Grupa stola:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <select 
+                    name="groupOfDeskId" required #groupOfDeskId="ngModel" [(ngModel)]="formGroupOfDeskId" (change)="loadSubGroups($event.target.value)">
+                    <option [ngValue]="undefined"> Grupa stola</option>
+                    <option *ngFor="let item of groupOfDeskList" [value]=item.id>{{item.name}}</option>
+                </select>
+    
+                <!-- <div class="alert-div" *ngIf="groupOfDeskId.invalid && (groupOfDeskId.dirty || groupOfDeskId.touched)">
+                    <span *ngIf="groupOfDeskId.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="startDate">Podgrupa stola:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <select 
+                    name="subGroupOfDeskId" required #subGroupOfDeskId="ngModel" [(ngModel)]="formPodGroupOfDeskId">
+                    <option [ngValue]="undefined"> Podgrupa stola</option>
+                    <option *ngFor="let item of subGroupOfDeskList" [value]=item.id>{{item.name}}</option>
+                </select>
+    
+                <!-- <div class="alert-div" *ngIf="podGroupOfDeskId.invalid && (podGroupOfDeskId.dirty || podGroupOfDeskId.touched)">
+                    <span *ngIf="podGroupOfDeskId.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <button  class="btn btn-primary " 
+                *ngIf="!editMode" type="submit">Dodaj</button>
+            <button type="submit"  class="btn btn-primary " 
+                *ngIf="editMode">Ažuriraj</button>
+    
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+   
+</form>
+

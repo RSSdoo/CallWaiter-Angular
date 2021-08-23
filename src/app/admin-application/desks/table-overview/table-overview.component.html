@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <div class="desks">
+        <div>
+            
+           
+
+            <div class="desks-table mb-10">
+                <div class="wrap-table100 shadoww">
+                    <div class="table100">
+                        <button class="btn btn-primary mobileButton" style="background-color: #1082df; border: none; width: 160px;; position: relative; float: right;" (click)="PreuzmiPDF()">Preuzmi u
+                            PDF</button>
+                        <table class="tablee bordered" style="background-color: #1082df;">
+                    
+                            <thead> 
+                               
+                                <div class="row">
+
+                                    <div class="col-md-9">
+                                        <h4 style="margin-left: 8px ; margin-top: 10px; color: white;">
+                                            Pregled stolova</h4>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input placeholder="Traži" />
+                                        <span class="material-icons"
+                                            style="position: absolute; margin-top: -25px; margin-left: 10px; color:#1082df ;">search</span>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+
+                                </div>
+
+
+
+                                <tr style="font-weight: bold;">
+
+                                    <td class="column1 font">Naziv stola</td>
+                                    <td class="column2 font">Broj mjesta</td>
+                                    <td class="column2 font">Grupa stola</td>
+                                    <td class="column3 font">Podgrupa stola</td>
+                                    <td class="column4 font">Status</td>
+                                    <td style="width: 50px;"></td>
+                                </tr>
+                            </thead>
+                            <tbody *ngIf="!spineer">
+                                <tr *ngFor="let item of deskList">
+
+                                    <td class="font">{{item.numberOfDesk}}</td>
+                                    <td class="font">{{item.numberOfSeats}}</td>
+                                    <td class="font">{{item.nameOfGroup}}</td>
+                                    <td class="font">{{item.nameOfSubGroup}}</td>
+                                    <td class="font" *ngIf="item.statusOfDeskId == 1">Slobodan</td>
+                                    <td  class="font"*ngIf="item.statusOfDeskId == 2">Konobar</td>
+                                    <td class="font" *ngIf="item.statusOfDeskId == 3">Meni</td>
+                                    <td class="font" *ngIf="item.statusOfDeskId == 4">Ne ometaj</td>
+                                    <td class="font" *ngIf="item.statusOfDeskId == 5">Placanje</td>
+
+
+                                    <td style="padding: 0px !important;" class="mobileActions">
+                                        <a style="display: transparent; padding: 0px;">
+                                            <span class="material-icons mobile" id="mobile"style="color: white; font-size: 30px;"
+                                                (click)="openAddDeskModal(item.id)">edit</span>
+                                        </a>
+                                        <a style="display: transparent;">
+                                            <span class="material-icons"  id="mobile"style="color: red; font-size: 30px;"
+                                                (click)="deleteTable(item.id)">delete</span>
+                                        </a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                            <tbody *ngIf="spineer">
+                                <tr>
+
+                                    <td></td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        <div *ngIf="spineer" class="loading-spinner" style="text-align: right;">
+                                            <div class="spinner-border" role="status" style="color:white ;">
+                                                <span class="sr-only"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+
+
+                            <nav aria-label="Page navigation example" style="margin: 10px;;">
+                                <ul class="pagination" style="transform: translate(157%);">
+                                    <div *ngIf="!hasPrevious">
+                                        <li class="page-item disabled"><a class="page-link"
+                                                style="width: 100px; text-align: center; background-color: white; color:  rgb(87, 85, 85);; border: none">Previous</a>
+                                        </li>
+                                    </div>
+                                    <div *ngIf="hasPrevious">
+                                        <li class="page-item"><a class="page-link"
+                                            style="width: 100px; text-align: center; background-color: white; color: black;  border: none"
+                                                (click)="getDesks(currentPage-1)">Previous</a>
+                                        </li>
+                                    </div>
+                                    <li class="page-item"><a class="page-link"
+                                            style="color:white ; border: none; background-color:  #1082df;;;">{{currentPage}}</a>
+                                    </li>
+
+                                    <div *ngIf="hasNext">
+                                        <li class="page-item"><a class="page-link"
+                                                style="width: 100px; text-align: center; background-color: white; color: black;  border: none"
+                                                (click)="getDesks(currentPage+1)">Next</a>
+                                        </li>
+                                    </div>
+                                    <div *ngIf="!hasNext">
+                                        <li class="page-item disabled"><a class="page-link"
+                                                style="width: 100px; text-align: center; background-color: white; color: rgb(87, 85, 85);   border: none">Next</a>
+                                        </li>
+                                    </div>
+
+                                </ul>
+                            </nav>
+
+                        </table>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

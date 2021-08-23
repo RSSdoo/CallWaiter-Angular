@@ -1,0 +1,45 @@
+label {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    margin: 0px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1082df;
+
+}
+input[type="text"], input[type="date"], input[type="number"], input[type="email"] {
+    box-sizing: border-box;
+    padding-left: 120px;
+    border: 1px solid white ;
+    background-color: white !important;
+    /* width: 70%;
+    margin-left: 30%; */
+}
+.btn {
+    width: 100%;
+    background-color: rgb(3, 79, 122) ; ;
+    border: none;
+}
+select 
+{   
+    width: 100%;
+    border: 1px solid white ;
+    padding-left: 120px;              
+    font-size: 14px; 
+    height: 38px;
+    
+}
+::ng-deep .mat-dialog-container{
+    background:  #1082df;
+    margin-left: 50px !important;
+}
+@media screen and (max-width: 736px)   {
+    ::ng-deep .mat-dialog-container{
+        background:
+ #1082df;
+   
+ ;
+        margin-left: 10px !important;
+    }
+}

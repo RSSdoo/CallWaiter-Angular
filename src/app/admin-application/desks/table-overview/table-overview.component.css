@@ -1,0 +1,254 @@
+.desks {
+    padding: 0 40px;
+    color: #222222;
+}
+
+
+/* desks */
+.desks-table {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 5%;
+}
+.font{
+  font-size: 20px;
+}
+.desks table td {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid;
+
+}
+
+
+@media screen and (max-width: 700px) {
+  .dashboard {
+    padding: 0;
+}
+.dashboard h4, .dashboard h3 {
+    text-align: center;
+}
+}
+
+@media screen and (max-width: 576px) {
+
+    .container-table100 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+  input {
+        border: 1px solid #1082df;
+        background-color:white;
+        outline: none;
+        margin-left: 5px;
+        padding: 2px 2px 2px 30px !important;
+        font-size: 16px;
+        font-weight: 500;
+        border-radius: .5em;
+        border-radius: 10px;
+        position: relative;
+        margin-top: 10px;
+  }
+  table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+  }
+  table * {
+    position: relative;
+  }
+
+  table tbody tr:last-child {
+    border: 0;
+  }
+
+
+  tbody tr {
+    font-size: 14px;
+    line-height: 0.8;
+    font-weight: unset;
+  }
+
+  .column1 {
+    width: 10px;
+
+  }
+  
+  .column2 {
+    width: 160px;
+  }
+  
+  .column3 {
+    width: 245px;
+  }
+  
+  .column4 {
+    width: 110px;
+ 
+  }
+  
+  .column5 {
+    width: 170px;
+
+  }
+  
+  .column6 {
+    width: 222px;
+    padding-right: 62px;
+  }
+  .box{
+      width: 300px;
+      height: 150px;
+      background-color: #f1deb6;
+      transform: translate(-25%,40%);
+      border-radius: 15px;
+      
+  }
+  .box-buttons{
+    width: 60%;
+    background-color: rgb(158, 94, 10);
+    border: none;
+    text-align: center;
+    transform: translate(30%, 30%);
+    margin-bottom: 5px;
+
+
+}
+  
+  @media screen and (max-width: 992px) {
+    .mobileButton{
+      position: absolute; 
+      margin-top: -50px;
+    }
+    .desks{
+      margin-top: 50px !important;
+    }
+    table {
+      display: block;
+    }
+    table > *, table tr, table td, table th {
+      display: block;
+    }
+    table thead {
+      display: none;
+    }
+    table tbody tr {
+      height: auto;
+      padding: 37px 0;
+    }
+    table tbody tr td {
+      padding-left: 50% !important;
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    table tbody tr td:last-child {
+      margin-bottom: 0;
+    }
+    table tbody tr td:before {
+      font-size: 14px;
+      color: #999999;
+      line-height: 1.2;
+      font-weight: unset;
+      position: absolute;
+      width: 40%;
+      left: 30px;
+      top: 0;
+    }
+    
+    .dashboard table tbody tr td:before {
+        color: rgb(104, 104, 104);
+        font-weight: bold;
+        padding: 20px;
+    }
+
+    .desks-table table tbody tr td:nth-child(1):before {
+      content: "Naziv stola:";
+      margin-top: 8px;
+      color: white;
+      text-align: left;
+      font-weight: bold;
+
+    }
+    td{
+      text-align: left !important;
+    }
+    .desks-table table tbody tr td:nth-child(2):before {
+      content: "Broj mjesta:";
+      margin-top: 8px;
+      color: white;
+      text-align: left;
+      font-weight: bold;
+
+    }
+    .desks-table table tbody tr td:nth-child(3):before {
+      content: "Grupa:";
+      margin-top: 8px;
+      color: white;
+      text-align: left;
+      font-weight: bold;
+
+    }
+    .desks-table table tbody tr td:nth-child(4):before {
+      content: "Podgrupa:";
+      margin-top: 8px;
+      color: white;
+      text-align: left;
+      font-weight: bold;
+
+    }
+    .desks-table table tbody tr td:nth-child(5):before {
+      content: "Status:";
+      margin-top: 8px;
+      color: white;
+      text-align: left;
+      font-weight: bold;
+    }
+    .desks-table table tbody tr td:nth-child(6) {
+ 
+      color: white;
+      text-align: center !important;
+    }
+    .mobile{
+      font-size: 50px;
+    }
+    #mobile{
+      font-size: 40px !important;
+    }
+    .font{
+      font-size: 20px !important;
+    }
+    /* .mobileActions{
+      text-align: center;
+      transform: translate(-10%);
+      border-bottom: none;
+    } */
+
+    
+    .column4,
+    .column5,
+    .column6 {
+      text-align: left;
+    }
+  
+    .column4,
+    .column5,
+    .column6,
+    .column1,
+    .column2,
+    .column3 {
+      width: 100%;
+    }
+  
+    tbody tr {
+      font-size: 14px;
+    }
+    
+  }

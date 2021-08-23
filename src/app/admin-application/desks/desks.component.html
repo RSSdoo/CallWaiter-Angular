@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+
+<body>
+    <div class="main" style="margin-left: 20px;">
+        <div >
+            <div class="card"  *ngFor="let item of deskList" style="display: inline-flex;"
+            [ngClass]="{'cardFree' : item.statusOfDeskId == 1, 'cardWaiter' : item.statusOfDeskId == 2,
+                'cardMeni' : item.statusOfDeskId == 3,'cardDontInterupt' : item.statusOfDeskId == 4, 'cardPay' : item.statusOfDeskId == 5} ">
+                <div >
+                    <div>
+                            <h3 [ngClass]="item.statusOfDeskId == 1 ? 'freeDesk' : 'busyDesk'">{{item.numberOfDesk}}</h3>
+                            <h3 class="status" [ngClass]="{'waiterText' : item.statusOfDeskId == 2, 'meniText' : item.statusOfDeskId == 3, 
+                            'dontInteruptText' : item.statusOfDeskId == 4, 'payText' : item.statusOfDeskId == 5 }"></h3>
+                            <h3 *ngIf="item.statusOfDeskId == 5" class="statusPayment">
+                                {{item.typeOfPaymentName}}
+                            </h3>
+                            
+                    </div>
+                    
+                    
+
+                </div>
+
+            </div>
+       
+    </div>
+</div>
+
+</body>
+</html>
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<body>
+
+    <div class="w3-sidebar w3-bar-block w3-collapse w3-card" style="width:300px;" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-hide-large" class="closeButton" (click)="w3_close()">&times;</button>
+        <div class="articlesHeading" (click)="getArticle(1, undefined)">
+            <h4>PREGLED</h4>
+            <h4>ARTIKALA</h4>
+        </div>
+        <div class="listOfGroups" *ngFor="let item of groupOfArticle">
+
+            <a class="w3-bar-item w3-button" id="groups" (click)="openTypesOfGroups(item.id)">
+                <span class="material-icons" id="spans">explore</span>
+                {{item.nameOfGroup}}</a>
+            <div *ngFor="let item2 of item.types" class="typesList">
+                <p type="button" class="typesButtons" (click)="getArticle(1, item.id, item2.id)"> {{item2.name}}</p>
+            </div>
+        </div>
+        <!-- <qr-code [value]="qrInfo" size="200" style="position: absolute; padding: 50px; bottom: 0px;"></qr-code> -->
+        <button type="button" class="btn btn-default" style="position: absolute; width: 70%; bottom: 30px; margin-left: 45px; margin-right: 45px; background-color: #c1bfbf;" (click)="pdfMeni()">Preuzmi pdf</button>
+    </div>
+
+    <div class="w3-main" style="margin-left:300px">
+        <div class="w3-container">
+            <div class="toogleMobile" >
+                <button class="w3-button w3-xlarge" style="color: white;" (click)="w3_open()">&#9776;</button>
+            </div>
+            <div class="inputDiv" >
+                <input type="text" class="inputSearch" placeholder="SEARCH">
+                <div class="spanSearch">
+                    <span class="material-icons" id="spanSearchMaterial">
+                        search
+                        </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="desks" style="margin-top: -5%;">
+        <div>
+            
+            <div class="desks-table mb-10">
+                <div class="wrap-table100 shadoww">
+                    <div class="table100">
+                        <table class="tablee bordered" style="background-color: #eeeeee;">
+                    
+                            <thead> 
+                            
+                                <tr style="font-weight: bold;">
+                                    <td style="width: 50px !important;"  >Slika artikla</td>
+                                    <td class="column1" style="width: 180px; text-align: left;" >Naziv artikla</td>
+                                    <td class="column2">Cijena</td>
+                                    <td class="column3">Grupa artikla</td>
+                                    <td class="column4">Vrsta artikla</td>
+                                    <td style="width: 120px;"></td>
+                                </tr>
+                            </thead>
+                            <tbody *ngIf="!spineer && articleList.length != 0">
+                                <tr *ngFor="let item of articleList">
+                                    <td style="width: 10px;" class="mobileTdForPicture">
+                                        <img src="{{item.image}}" *ngIf="item.image.length > 50" width="100" style="border-radius: 3px; padding: 0px !important;" class="mobileForPicture">
+                                    </td>
+                                    <td style="text-align: left; font-size: 15px !important;" >
+                                        {{item.name}}</td>
+                                    <td style="font-size: 15px !important;" class="mobileTdPicture">{{item.price}} KM</td>
+                                    <td class="mobileTdPicture" style="font-size: 15px !important;;">{{item.groupOfArticleName}}</td>
+                                    <td class="mobileTdPicture" style="font-size: 15px !important;;">{{item.typeOfGroupArticleName}}</td>
+                                
+                                    <td style="padding: 0px !important;">
+                                        <a style="display: transparent; padding: 0px; " type="button">
+                                            <span class="material-icons mobile" style="color: teal; font-size: 28px !important;"
+                                                (click)="openAddDeskModal(item.id)">edit</span>
+                                        </a>
+                                     
+                                        <a style="display: transparent;" data-toggle="modal" type="button" data-target="#pictureModal" (click)="SaveArticleId(item.id)">
+                                           <span class="material-icons mobile"  style="color: teal; font-size: 28px !important;"
+                                           > insert_photo</span>
+                                        </a>
+                                        <a style="display: transparent;">
+                                            <span class="material-icons mobile" type="button" style="color: red; font-size: 28px !important;"
+                                                (click)="deleteArticle(item.id)">delete</span>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody *ngIf="spineer">
+                                <tr>
+
+                                    <td></td>
+                                    <td>
+                                        <div *ngIf="spineer" class="loading-spinner" style="text-align: right;">
+                                            <div class="spinner-border" role="status" style="color: white ;">
+                                                <span class="sr-only"></span>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                            <tbody *ngIf="articleList.length === 0 && !spineer">
+                                <td></td>
+                                <td></td>
+                                <td> <h4 >Nema rezultata!</h4></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+
+                            </tbody>
+                            <nav aria-label="Page navigation example" style="margin: 10px;;">
+                                <ul class="pagination" style="transform: translate(155%);">
+                                    <div *ngIf="!hasPrevious">
+                                        <li class="page-item disabled"><a class="page-link" type="button"
+                                                style="width: 100px; text-align: center; background-color: white; color: rgb(68, 67, 67); border: none">Previous</a>
+                                        </li>
+                                    </div>
+                                    <div *ngIf="hasPrevious">
+                                        <li class="page-item"><a class="page-link" type="button"
+                                                style="width: 100px; text-align: center;background-color: white; color: black; border: none"
+                                                (click)="getArticle(currentPage-1)">Previous</a>
+                                        </li>
+                                    </div>
+                                    <li class="page-item"><a class="page-link" type="button"
+                                            style="color:white ; border: none; background-color: transparent;;">{{currentPage}}</a>
+                                    </li>
+
+                                    <div *ngIf="hasNext">
+                                        <li class="page-item"><a class="page-link" type="button"
+                                                style="width: 100px; text-align: center;background-color: white; color: black; border: none"
+                                                (click)="getArticle(currentPage+1)">Next</a>
+                                        </li>
+                                    </div>
+                                    <div *ngIf="!hasNext">
+                                        <li class="page-item disabled"><a class="page-link"type="button"
+                                                style="width: 100px; text-align: center; background-color: white; color: rgb(68, 67, 67);  border: none">Next</a>
+                                        </li>
+                                    </div>
+
+                                </ul>
+                            </nav>
+
+                        </table>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
+<div class="modal" id="pictureModal" tabindex="-1"
+    role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="false" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" style="padding: 0px">
+                <button type="button" data-dismiss="modal" class="close" style="margin-right: 10px;">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <h3>Unesite sliku</h3>
+                    <div class="form-group m-form__group">
+                        <br/>
+                        <input type="file" (change)="fileChangeEvent($event)" />
+                        <image-cropper [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="4 / 3" resizeToWidth="255"
+                            resizeToHeight="255" (imageCropped)="imageCropped($event)" 
+                            ></image-cropper>
+                    </div>
+                    <div style="text-align: center;">
+                        <h3 *ngIf="croppedImage.length>10">Pohrana: </h3>
+                    <img src="{{croppedImage}}" style="width:200px;" />
+                    </div>  
+            
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" style="background-color: #1082df ;" class="btn btn-primary" (click)="UpdateForImage()" >Spremi </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,201 @@
+.articlesHeading{
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  margin-top: 10%;
+}
+h4{
+font-weight: bold;
+
+}
+.closeButton{
+color: white;
+font-size: 25px;
+background-color:none !important;
+border: none !important;
+background: none !important;
+display: none;
+}
+.underline{
+
+}
+.desks{
+margin-left: 0%;
+}
+.typesButtons:hover{
+color: navajowhite !important;
+}
+.listOfGroups{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  outline: none;
+}
+.w3-button:hover{
+  color: navajowhite !important;
+  background-color: transparent !important;
+}
+#spans{
+transform: translate(0, 23%) !important;
+}
+.typesList{
+text-decoration: none !important;
+text-align: left;
+margin-left: 42%;
+font-weight: normal;
+color: white;
+text-transform: none;
+}
+p{
+text-decoration: none;
+margin: 0;
+}
+#groups{
+margin-left: 25%;
+color: white;
+
+}
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: white;
+opacity: 1; /* Firefox */
+}
+.toogleMobile{
+display: none;
+}
+#mySidebar{
+background-color: teal
+}
+.w3-container{
+height: 100px;
+background-color: black;
+}
+.inputSearch{
+border: 1px solid teal;
+background-color: black;
+color: white !important;
+outline: none;
+padding: 10px;
+width: 300px;
+}
+.inputDiv{
+padding: 25px;
+display: inline-flex;
+}
+.spanSearch{
+width: 50px;
+background-color: teal;
+}
+#spanSearchMaterial{
+color: white;
+transform: translate(30%, 25%);
+font-size: 30px;
+} 
+@media screen and (max-width: 736px)   {
+.toogleMobile{
+  display: block;
+}
+.inputDiv{
+  padding:  0px;
+  
+}
+.closeButton{
+  display: block;
+}
+}
+
+.filterSpan{
+transform: translate(0,10%);
+color: white;
+font-size: 28px;
+}
+.modalH4{
+transform: translate(50%, 20%);
+}
+figure {
+  border: 1px solid;
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+
+}
+
+figcaption {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  background-color: rgb(1, 1, 1, 0.6);
+  width: 100%;
+  
+}
+.groupModalButtons{
+background-color: teal;
+width: 180px;
+margin-bottom: 4px;
+text-align: center;
+}
+h5{
+  color: white;
+  font-weight: bolder;
+  font-size: 16px;
+}
+.filterButton{
+  width: 80px;
+  background-color: #0e8ef3;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+}
+.row {
+
+}
+.col-md-4{
+  margin-top: 5%;
+}
+
+.displayPictures div  {
+  float: left;
+}
+.displayPictures{
+  overflow: hidden;
+  margin-left: 320px;
+}
+
+@media screen and (max-width: 992px) {
+#filterModal{
+  transform: translate(21%) !important;
+}
+.displayPictures{
+  margin-left: 0px !important;
+  position: absolute;   
+  left: 50%;
+  transform: translate(-50%, 0%); 
+  display: block
+  
+}
+.row {
+
+  margin-top: 5% !important;
+}
+.elements{
+  margin-top: 5%;
+}
+.final .fig{
+
+}
+.final{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.col-md-4{
+  margin-top: 5%;
+}
+
+}
+
+
+
+
+

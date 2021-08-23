@@ -1,0 +1,279 @@
+<!--begin::Widget 11-->
+
+<form #addUserForm="ngForm" (ngSubmit)="onSubmit()" >
+     
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <h4 style="text-align: center; color: white; margin-bottom: 10px;">Dodaj korisnika</h4> 
+        </div>
+        <div class="col-md-1">
+            <a mat-dialog-close style="background: transparent; border: none;"><span class="material-icons" style="color:white;">close</span></a>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Ime:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="name" ngModel class="form-control"
+                     placeholder="Ime">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Adresa:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="adress" ngModel class="form-control"
+                     placeholder="Adresa">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Grad:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="city" ngModel class="form-control"
+                     placeholder="Grad">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Država:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="country" ngModel class="form-control"
+                     placeholder="Država">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">ID broj:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="number" name="idNumber" ngModel class="form-control"
+                     placeholder="ID broj">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Broj mobitela:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="mobile" ngModel class="form-control"
+                     placeholder="Broj mobitela">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Email:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="mail" ngModel class="form-control"
+                     placeholder="Email">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Korisničko ime:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="username" ngModel class="form-control"
+                     placeholder="Korisničko ime">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">Lozinka:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="password" name="password" ngModel class="form-control"
+                     placeholder="Lozinka" style="padding-left: 120px;">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="startDate">Objekat:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <select 
+                    name="objectId" required ngModel #objectId="ngModel" [(ngModel)]="formObjectId">
+                    <option [ngValue]="undefined"> Objekat</option>
+                    <option *ngFor="let item of objectList" [ngValue]=item.id>{{item.name}}</option>
+                </select>
+    
+                <!-- <div class="alert-div" *ngIf="groupOfDeskId.invalid && (groupOfDeskId.dirty || groupOfDeskId.touched)">
+                    <span *ngIf="groupOfDeskId.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate">VAT Broj:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="number" name="vatnumber" ngModel class="form-control"
+                     placeholder="VAT Broj">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <button  class="btn btn-primary " 
+                type="submit">Dodaj</button>
+            <!-- <button type="submit"  class="btn btn-primary " 
+                *ngIf="editMode">Ažuriraj</button> -->
+    
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    
+</form>

@@ -1,0 +1,109 @@
+<mat-dialog-content>
+<form #addGroupDeskForm="ngForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <h4 style="text-align: center; color: white; margin-bottom: 10px;" *ngIf="!editMode">Dodaj grupu stolova</h4>
+            <h4 style="text-align: center; color: white; margin-bottom: 10px;" *ngIf="editMode">Azuriraj grupu</h4>
+
+        </div>
+        <div class="col-md-1">
+            <a mat-dialog-close style="background: transparent; border: none;"><span class="material-icons"
+                    style="color:white;">close</span></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <div class="form-group ">
+                <label for="startDate" style="color:  #1082df;">Naziv grupe:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="nameOfGroup" #nameOfGroup="ngModel" ngModel class="form-control"
+                    placeholder="Naziv grupe">
+
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <button type="submit" class="btn btn-primary " *ngIf="!editMode">Dodaj</button>
+            <button type="submit" class="btn btn-primary " *ngIf="editMode">Ažuriraj</button>
+
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+
+
+
+</form>
+<br>
+<div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-8">
+        <div class="desks">
+            <div>
+                <div class="desks-table mb-10">
+                    <div class="wrap-table100 shadoww">
+                        <div class="table100">
+                            <table class="table">
+                                <thead>
+                                    <tr
+                                        style="border-top: 3px solid white; color:white; font-weight: bold;">
+                                        <td>Naziv</td>
+                                        <td></td>
+                                    </tr>
+                                </thead>
+                                <tbody *ngIf="!spinner">
+                                    <tr *ngFor="let item of deskList">
+                                        <td style="color:white;">{{item.name}}</td>
+                                        <td style="padding: 0px !important">
+                                            <a style="display: transparent;" (click)="initEditMode(item.id)">
+                                                <span class="material-icons"
+                                                    style="color: white; transform: translate(0,20%);">edit</span>
+                                            </a>
+                                            <a style="display: transparent;" (click)="Delete(item.id)">
+                                                <span class="material-icons"
+                                                    style="color: red; transform: translate(0,20%);">delete</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tbody *ngIf="spinner">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="loading-spinner" style="text-align: left;">
+                                                <div class="spinner-border" role="status"
+                                                    style="color:white;">
+                                                    <span class="sr-only"></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-md-1">
+        </div>
+    </div>
+</div>
+</mat-dialog-content>

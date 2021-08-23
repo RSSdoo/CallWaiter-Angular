@@ -1,0 +1,119 @@
+
+<form #addsnlinks="ngForm" (ngSubmit)="onSubmit()" >
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <h4 style="text-align: center; color: white; margin-bottom: 10px;">Linkovi: </h4> 
+        </div>
+        <div class="col-md-1">
+
+        </div>
+        <div class="col-md-1">
+            <a mat-dialog-close style="background: transparent; border: none;"><span class="material-icons" style="color:white;">close</span></a>
+        </div>
+    </div>
+  
+    <div class="row">
+        <div class="col-md-2">
+        </div> 
+        <div class="col-md-12">
+            <div class="form-group ">
+                <label for="startDate">TripAdvisor:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="tripadvisor" #tripadvisor="ngModel" ngModel class="form-control"
+                     placeholder="https://tripadvisor/review">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-12">
+            <div class="form-group ">
+                <label for="startDate">Google:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="google" #google="ngModel" ngModel class="form-control"
+                     placeholder="https://google/review">
+                <!-- <div class="alert-div" *ngIf="numberOfDesk.invalid && (numberOfDesk.dirty || numberOfDesk.touched)">
+                    <span *ngIf="numberOfDesk.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="startDate">Facebook:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="facebook" #facebook="ngModel" ngModel class="form-control"
+                     placeholder="https://facebook/review">
+                <!-- <div class="alert-div" *ngIf="groupOfDeskId.invalid && (groupOfDeskId.dirty || groupOfDeskId.touched)">
+                    <span *ngIf="groupOfDeskId.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-12">
+            <div class="form-group">
+                <label for="startDate">Instagram:<span class="material-icons">
+                        date
+                    </span>
+                </label>
+                <input type="text" name="instagram" #instagram="ngModel" ngModel class="form-control"
+                     placeholder="https://insta/review">
+    
+                <!-- <div class="alert-div" *ngIf="podGroupOfDeskId.invalid && (podGroupOfDeskId.dirty || podGroupOfDeskId.touched)">
+                    <span *ngIf="podGroupOfDeskId.errors.required">
+                        Polje je obavezno!
+                    </span>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <button  class="btn btn-primary " 
+                *ngIf="!editMode" type="submit">Dodaj</button>
+            <button type="submit"  class="btn btn-primary " 
+                *ngIf="editMode">Ažuriraj</button>
+    
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+   
+</form>
