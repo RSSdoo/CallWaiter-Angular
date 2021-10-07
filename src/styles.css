@@ -3,8 +3,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 body{
-    background-color: #485461;
-    background-image: url('src/assets/back.jpg');   
+    background-color: #485461; 
+    background-image: url('src/assets/back.jpg');
 }
 #outer
 {
@@ -64,9 +64,9 @@ body { margin: 0; font-family: Roboto }
 @media screen and (max-width: 736px)   {
 
     body{
-        background: url('src/assets/Pozadina-01.jpg') repeat !important;
+        /* background: url('src/assets/Pozadina-01.jpg') repeat !important;
         background-size: cover !important;
-        background-attachment: fixed !important;
+        background-attachment: fixed !important;  */
 
 
     }

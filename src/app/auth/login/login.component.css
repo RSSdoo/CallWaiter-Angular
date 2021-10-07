@@ -103,7 +103,13 @@ html {
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
-  
+  .isAuth{
+    width: 85%;
+    margin: 5px;
+    text-align: center;
+    display: inline-block;
+
+  }
   input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
     background-color: #39ace7;
   }

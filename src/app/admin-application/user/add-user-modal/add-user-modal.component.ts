@@ -1,3 +1,4 @@
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
@@ -6,6 +7,7 @@ import { UserService } from 'src/app/api-services/user.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { IObject } from 'src/app/shared/interface/IObject/IObject';
 import { IUser } from 'src/app/shared/interface/IUser/IUser';
+import { ObjectUpsertModel } from 'src/app/shared/models/object-upsert.model';
 import { UserUpsertModel } from 'src/app/shared/models/user-upsert.model';
 
 @Component({
@@ -43,12 +45,17 @@ export class AddUserModalComponent implements OnInit {
     console.log(this.UserList);
   }
   onSubmit(){
-    var user=new UserUpsertModel(this.addUserForm.value.name,this.addUserForm.value.adress,this.addUserForm.value.city,
-      this.addUserForm.value.country,this.addUserForm.value.idNumber,this.addUserForm.value.mobile,this.addUserForm.value.mail,
-      this.addUserForm.value.username,this.addUserForm.value.password,this.addUserForm.value.objectId,this.addUserForm.value.vatnumber);
-    
-      this._UserService.Insert(user).subscribe(data=>{
-        this.dialog.closeAll();
-      })
+    var object = new ObjectUpsertModel(this.addUserForm.value.object)
+    this._ObjectService.Insert(object).subscribe(t=> {
+      var user=new UserUpsertModel(this.addUserForm.value.name,this.addUserForm.value.adress,this.addUserForm.value.city,
+        this.addUserForm.value.country,this.addUserForm.value.idNumber,this.addUserForm.value.mobile,this.addUserForm.value.mail,
+        this.addUserForm.value.username,this.addUserForm.value.password, t['id'], this.addUserForm.value.vatnumber);
+      
+        this._UserService.Insert(user).subscribe(data=>{
+          this.dialog.closeAll();
+        })
+      
+    })
+      
   }
 }

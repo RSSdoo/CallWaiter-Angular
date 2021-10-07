@@ -223,11 +223,13 @@
                         date
                     </span>
                 </label>
-                <select 
+                <input type="text" name="object" ngModel class="form-control"
+                     placeholder="Naziv objekta">
+                <!-- <select 
                     name="objectId" required ngModel #objectId="ngModel" [(ngModel)]="formObjectId">
                     <option [ngValue]="undefined"> Objekat</option>
                     <option *ngFor="let item of objectList" [ngValue]=item.id>{{item.name}}</option>
-                </select>
+                </select> -->
     
                 <!-- <div class="alert-div" *ngIf="groupOfDeskId.invalid && (groupOfDeskId.dirty || groupOfDeskId.touched)">
                     <span *ngIf="groupOfDeskId.errors.required">

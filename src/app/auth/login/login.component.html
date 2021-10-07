@@ -5,7 +5,9 @@
     <div id="formContent">
       <span class="material-icons"style="font-size: 50px; color: #33648c">person</span>
       <form #loginForm= "ngForm" (ngSubmit) = "onSubmit()" autocomplete="off">
-          
+          <div *ngIf="isAuth" class="alert alert-danger isAuth">
+            <span>Invalid username or password</span>
+          </div>
         <input type="text" id="login" #username="ngModel" class="fadeIn second" name="username" placeholder="username" ngModel autocomplete="off">
         <input type="password" id="password"  #password="ngModel"class="fadeIn third" name="password" placeholder="password" ngModel>
         <button type="submit" style="background-color: #33648c; border: none; width: 85%;

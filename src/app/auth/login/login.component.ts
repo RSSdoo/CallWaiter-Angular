@@ -10,6 +10,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
   isLoading = false;
+  isAuth = false;
   constructor(private router: Router, private authService: AuthService) { }
   @ViewChild('loginForm') public loginForm: NgForm;
 
@@ -29,6 +30,7 @@ export class LoginComponent implements OnInit {
       localStorage.setItem('object', btoa(btoa(btoa(String(s.listOfObject.find(f=>f.username == username).objectId)))))
       this.router.navigate(['/app/admin']);
       this.isLoading = false;
+      this.isAuth= false;
     }, 
     error => {
       if(error.status == 400) {
@@ -38,6 +40,7 @@ export class LoginComponent implements OnInit {
       
       }
       this.isLoading = false
+      this.isAuth = true;
     });
   }
 

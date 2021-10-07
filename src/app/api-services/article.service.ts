@@ -13,6 +13,7 @@ import { ArticleUpsertModel } from '../shared/models/article-upsert.model';
 })
 export class ArticleService {
   readonly url = environment.url + "article"
+  // readonly url = "https://callwaiterwebapi20210823103751.azurewebsites.net/api/" + "article"
 
   constructor(private http: HttpClient) { }
   GetAll(pageNumber: number, search: string, groupOfArticleId?: number, objectId?: number, getAllFilter?: boolean,typeOfGroupArticleId? : number ) {
