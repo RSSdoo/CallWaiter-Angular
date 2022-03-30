@@ -44,7 +44,7 @@ export class RestaurantMenuComponent implements OnInit {
   groupOfArticle: IGroupOfArticle[] = []
   typeOfGroups: ITypeOfGroupArticle [] = [];
   typeOfGroupId: number;
-  qrInfo: string = "https://callwaiter.tk/#/meni/" + this.loggedInObject;
+  qrInfo: string = "https://callwaiter.ml/#/meni/" + this.loggedInObject;
   ngOnInit(): void {
     this.getGroupOfArticleList()
     this.getTypeOfGroupArticleList();
